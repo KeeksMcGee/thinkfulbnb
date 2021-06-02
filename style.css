@@ -5,27 +5,24 @@ body {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 26px;
+  font-weight: 400;
   margin: 0 10px 10px 10px;
   text-align: center;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 p {
   line-height: 1.5em;
   margin: 0;
-  font-size: 24px;
 }
 
 section {
   padding: 20px;
-}
-
-section ul li {
-  font-size: 20px;
 }
 
 section.alternate-background {
@@ -34,10 +31,7 @@ section.alternate-background {
 }
 
 main img {
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  padding-bottom: 20px;
 }
 
 /* ---  Groups & Items --- */
@@ -45,13 +39,11 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
-  
 }
 
 .item {
   flex: 1;
   margin: 10px;
-  flex-direction: row;
 }
 
 .item-double {
@@ -72,22 +64,23 @@ header {
   color: #fff;
 }
 
-header nav ul li {
-  list-style-type: none;
+header nav {
+  display: flex;
+  justify-content: center;
 }
 
-#menu {
+header nav ul {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-bottom: 20px;
+}
+
+header nav ul li {
+  list-style-type: none;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
-  font-size: 24px;
 }
 
 header nav ul li a:hover {
@@ -99,13 +92,15 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
 }
 
 form label {
   font-weight: bold;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
 }
 
 form select,
@@ -114,7 +109,6 @@ form input {
   width: 180px;
 }
 
-
 form button {
   background-color: #ff385c;
   border: none;
@@ -122,12 +116,6 @@ form button {
   font-size: 24px;
   padding: 15px;
   width: 100%;
-}
-
-#container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 /* -------  Footer ------- */
@@ -145,17 +133,43 @@ footer p {
 /* -------  Media Query ------- */
 
 @media all and (min-width: 480px) {
-
-  main img {
+  header {
     display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .logo {
+    margin: 14 px 0 14px 20px;
+    padding-top: 0;
+    font-size: 42px
+  }
+
+  header nav ul {
+    align-items: center;
+  }
+
+  .group {
     flex-direction: row;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form button {
     flex: 1;
   }
 
-  #containerColumn {
-   display: flex;
-   
-
+  form select,
+  form input {
+    margin-bottom: 0px;
   }
-
 }
