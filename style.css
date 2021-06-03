@@ -132,7 +132,7 @@ footer p {
 
 /* -------  Media Query -------- */
 
-@media all and (min-width: 200px) {
+@media all and (max-width: 320px) {
   .logo {
     font-size: 40px;
     text-align: center;
@@ -146,7 +146,7 @@ footer p {
   }
 }
 
-@media all and (min-width: 480px) {
+@media all and (min-width: 700px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -169,10 +169,11 @@ footer p {
   }
 
   form {
-    width: 95%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   form div {
@@ -185,9 +186,8 @@ footer p {
 
   form select,
   form input {
-   
     margin-bottom: 0px;
-    width: 90%;
+    width: 100%;
     justify-content: space-evenly;
   }
 }
